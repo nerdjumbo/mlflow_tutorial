@@ -41,19 +41,7 @@ sudo apt install python3-pip
 sudo pip3 install pipenv
 
 
-sudo pip3 install virtualenv
-
-mkdir mlflow
-
-cd mlflow
-
-pipenv install mlflow
-
-pipenv install awscli
-
-pipenv install boto3
-
-pipenv shell
+sudo pip3 install virtualenv && mkdir mlflow && cd mlflow && pipenv install mlflow && pipenv install awscli && pipenv install boto3 && pipenv shell
 
 
 ## Then set aws credentials
@@ -61,12 +49,12 @@ aws configure
 
 
 #Finally 
-mlflow server -h 0.0.0.0 --default-artifact-root s3://mlflow-23
+mlflow server -h 0.0.0.0 --default-artifact-root s3://mlflow-nerdjumbo
 
 #open Public IPv4 DNS to the port 5000
 
 
 #set uri in your local terminal and in your code 
-export MLFLOW_TRACKING_URI=http://ec2-174-129-109-191.compute-1.amazonaws.com:5000/
+export MLFLOW_TRACKING_URI=http://ec2-23-22-237-173.compute-1.amazonaws.com:5000/
 ```
 
